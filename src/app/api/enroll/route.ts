@@ -46,7 +46,9 @@ export async function POST(request: Request) {
       );
     }
 
-    return NextResponse.json({ ok: true });
+    // `tg` reports whether Telegram forwarding is configured — handy for
+    // verifying that the env vars are live after a deploy.
+    return NextResponse.json({ ok: true, tg: Boolean(token && chatId) });
   } catch (err) {
     console.error("[enroll] Unexpected error:", err);
     return NextResponse.json({ ok: false, error: "server" }, { status: 500 });
