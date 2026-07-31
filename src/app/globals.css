@@ -1,0 +1,260 @@
+@import "tailwindcss";
+
+/* Toggle dark styles when a .dark class is on a parent (set by next-themes) */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ─────────────────────────────────────────────────────────────
+   Design tokens — "Prestige academic": cardinal red + gold on a
+   warm cream/ink base. Defined once here, reused everywhere.
+   ───────────────────────────────────────────────────────────── */
+:root {
+  --background: #faf7f1;      /* warm cream paper */
+  --foreground: #1d1510;      /* espresso ink */
+  --card: #ffffff;
+  --card-foreground: #1d1510;
+  --muted: #f2ece1;           /* soft sand */
+  --muted-foreground: #6d5e4e;
+  --border: #e7dccb;
+  --brand: #8c1515;           /* Stanford cardinal */
+  --brand-strong: #6f0f0f;    /* darker cardinal (hover) */
+  --brand-foreground: #ffffff;
+  --gold: #b0872f;            /* academic gold */
+  --gold-soft: #caa24a;
+  --accent: #8c1515;
+  --ring: #8c1515;
+  /* frosted surface */
+  --glass: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(29, 21, 16, 0.08);
+}
+
+.dark {
+  --background: #15110d;       /* deep warm brown-black */
+  --foreground: #f3ece0;
+  --card: #201911;
+  --card-foreground: #f3ece0;
+  --muted: #251d14;
+  --muted-foreground: #b7a894;
+  --border: #33271a;
+  --brand: #e0605a;           /* lightened cardinal for contrast */
+  --brand-strong: #ef7a72;
+  --brand-foreground: #1a0c0a;
+  --gold: #d9b06a;
+  --gold-soft: #e6c78f;
+  --accent: #e0605a;
+  --ring: #e0605a;
+  --glass: rgba(32, 25, 17, 0.6);
+  --glass-border: rgba(217, 176, 106, 0.14);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-brand: var(--brand);
+  --color-brand-strong: var(--brand-strong);
+  --color-brand-foreground: var(--brand-foreground);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --color-accent: var(--accent);
+  --color-ring: var(--ring);
+
+  --radius-card: 1rem;
+  --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-display), ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Keep the default border color in the base layer so Tailwind's
+   border-<color> utilities (border-gold, border-brand…) can still override it. */
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+}
+
+body {
+  /* Brand-red stage: visible in the side gutters on very wide / zoomed-out
+     screens; the content shell paints its own cream background on top. */
+  background: linear-gradient(160deg, #5e0d0e 0%, #a11a1a 48%, #760f11 100%);
+  color: var(--foreground);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--brand) 24%, transparent);
+}
+
+*:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Headings use the standard body face (plain, clean) per the client's wish */
+.font-display {
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+/* Handwritten script for the teacher's name */
+.font-script {
+  font-family: var(--font-script), "Segoe Script", cursive;
+}
+
+/* Crimson → gold gradient text (classic collegiate pairing) */
+.gradient-text {
+  background-image: linear-gradient(100deg, var(--brand), var(--gold) 95%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ─────────────── Buttons ─────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  padding: 0.8rem 1.6rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.25s ease,
+    background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+.btn-primary {
+  color: var(--brand-foreground);
+  background-color: var(--brand);
+  box-shadow: 0 10px 26px -10px color-mix(in oklab, var(--brand) 70%, transparent);
+}
+.btn-primary:hover {
+  background-color: var(--brand-strong);
+  transform: translateY(-1px);
+  box-shadow: 0 16px 34px -10px color-mix(in oklab, var(--brand) 75%, transparent);
+}
+.btn-primary:active {
+  transform: translateY(0);
+}
+.btn-outline {
+  color: var(--foreground);
+  background-color: transparent;
+  border: 1px solid var(--border);
+}
+.btn-outline:hover {
+  border-color: var(--brand);
+  color: var(--brand);
+  background-color: color-mix(in oklab, var(--brand) 7%, transparent);
+}
+/* Green action button — the primary "enrol" CTA (like the reference site) */
+.btn-cta {
+  color: #ffffff;
+  background-color: #1eaf57;
+  box-shadow: 0 12px 28px -10px rgba(30, 175, 87, 0.55);
+}
+.btn-cta:hover {
+  background-color: #199049;
+  transform: translateY(-1px);
+  box-shadow: 0 16px 34px -10px rgba(30, 175, 87, 0.6);
+}
+
+/* Chamfered block lettering for the hero wordmark (Master-IELTS-style) */
+.font-block {
+  font-family: var(--font-block), var(--font-display), ui-sans-serif, sans-serif;
+}
+
+/* Thin gold rule used as an accent divider */
+.hairline {
+  height: 1px;
+  width: 3rem;
+  background-image: linear-gradient(90deg, var(--gold), transparent);
+}
+
+/* Frosted card */
+.glass {
+  background: var(--glass);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--glass-border);
+}
+
+/* Ambient color blobs behind hero / sections */
+.blob {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(80px);
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: 0;
+}
+.dark .blob {
+  opacity: 0.35;
+}
+
+/* Faint academic grid, faded with a mask */
+.grid-overlay {
+  background-image:
+    linear-gradient(to right, var(--border) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--border) 1px, transparent 1px);
+  background-size: 60px 60px;
+  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, #000 25%, transparent 75%);
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, #000 25%, transparent 75%);
+}
+
+/* Scroll-reveal — visible by DEFAULT so the page is never blank if JS or
+   IntersectionObserver fail. When JS runs it adds data-reveal="hidden" (before
+   paint) and then reveals on scroll / via a safety timeout. */
+.reveal {
+  opacity: 1;
+  transform: none;
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+.reveal[data-reveal="hidden"] {
+  opacity: 0;
+  transform: translateY(22px);
+}
+
+/* Marquee strip */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+/* Results marquee — student result cards drifting right-to-left.
+   Pauses on hover (desktop) or while .paused is set (touch). */
+.results-track {
+  animation: marquee 55s linear infinite;
+}
+.results-marquee:hover .results-track,
+.results-marquee.paused .results-track {
+  animation-play-state: paused;
+}
+
+/* FAQ chevron rotates when its <details class="group"> is open */
+.group[open] .faq-chevron {
+  transform: rotate(180deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal,
+  .reveal[data-reveal="hidden"] { opacity: 1; transform: none; transition: none; }
+  .animate-marquee { animation: none; }
+  .results-track { animation: none; }
+}

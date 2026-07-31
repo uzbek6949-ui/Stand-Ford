@@ -1,0 +1,296 @@
+{
+  "meta": {
+    "title": "Stanford Education — Ingliz tili, IELTS va koreys tili markazi",
+    "description": "Koson shahridagi ingliz tili, IELTS va koreys tili tayyorlov markazi. Tajribali ustozlar va isbotlangan metodika. Birinchi sinov darsi bepul — hoziroq bog'laning."
+  },
+  "brand": {
+    "name": "Stanford",
+    "suffix": "Education",
+    "full": "Stanford Education Center",
+    "tagline": "Widen your horizons"
+  },
+  "nav": {
+    "about": "Biz haqimizda",
+    "courses": "Kurslar",
+    "why": "Nega biz",
+    "results": "Natijalar",
+    "teachers": "Ustoz",
+    "faq": "Savol-javob",
+    "cta": "Bog'lanish",
+    "enroll": "Darsga yozilish"
+  },
+  "hero": {
+    "topLabel": "Koson shahridagi til markazi",
+    "founderRole": "Asoschi · Multilevel instruktor",
+    "tagline": "Eng qisqa vaqtda IELTS'ni qo'lga kiriting!",
+    "subtitle": "Tajribali ustoz rahbarligida, isbotlangan metodika bilan — nol darajadan yuqori ballgacha olib boramiz.",
+    "cta": "Darsga yozilish",
+    "note": "Birinchi sinov darsi — bepul"
+  },
+  "stats": {
+    "experience": { "value": "9+", "label": "yillik tajriba" },
+    "students": { "value": "1000+", "label": "bitiruvchilar" },
+    "ielts": { "value": "50+", "label": "IELTS sertifikat" },
+    "cefr": { "value": "500+", "label": "sertifikatlar" }
+  },
+  "marquee": [
+    "IELTS tayyorlov",
+    "Umumiy ingliz tili",
+    "Kids English",
+    "Koreys tili",
+    "Grammar",
+    "Speaking",
+    "Mock imtihonlar",
+    "Multilevel"
+  ],
+  "hook": {
+    "tag": "Muammo bormi?",
+    "title": "Sizni nima to'xtatib turibdi?",
+    "subtitle": "Ko'pchilik shu muammolar bilan keladi — va Stanford Education'da har biriga yechim bor.",
+    "cta": "Bepul konsultatsiya oling",
+    "items": {
+      "one": {
+        "pain": "Necha yil o'qisangiz ham erkin gapira olmayapsizmi?",
+        "solution": "Har darsda jonli muloqot — nazariya emas, amaliyot birinchi o'rinda turadi."
+      },
+      "two": {
+        "pain": "IELTS imtihonidan qo'rqasiz, formatini bilmaysizmi?",
+        "solution": "Muntazam mock imtihonlar orqali haqiqiy imtihon sharoitiga to'liq moslashasiz."
+      },
+      "three": {
+        "pain": "Vaqtingiz kam, lekin tez natija kerakmi?",
+        "solution": "Darajangizga mos intensiv guruhlar bilan qisqa muddatda ilgarilaysiz."
+      }
+    }
+  },
+  "about": {
+    "tag": "Biz haqimizda",
+    "title": "Stanford Education — natijaga yo'naltirilgan markaz",
+    "lead": "Biz 9 yildan ortiq vaqtdan beri Koson shahrida ingliz tilini o'rgatamiz va o'quvchilarni IELTS hamda CEFR imtihonlariga tayyorlaymiz.",
+    "body1": "Har bir o'quvchi — alohida shaxs. Shuning uchun darslarni kichik guruhlarda olib boramiz va har kimning darajasi hamda maqsadiga moslashamiz. Tajribali ustozlarimiz nafaqat grammatikani, balki jonli muloqotni ham o'rgatadi.",
+    "body2": "Maqsadimiz — sizni imtihon xonasiga to'liq tayyor holda kiritish. Buning uchun muntazam mock imtihonlar, shaxsiy fikr-mulohaza va aniq o'quv rejasidan foydalanamiz.",
+    "points": {
+      "p1": "Tajribali, Multilevel instruktor ustoz",
+      "p2": "Kichik guruhlar (6–10 kishi)",
+      "p3": "Har oy nazorat va mock imtihon",
+      "p4": "Zamonaviy va qulay sinfxonalar"
+    }
+  },
+  "courses": {
+    "tag": "Kurslar",
+    "title": "Sizga mos yo'nalishni tanlang",
+    "subtitle": "Boshlang'ichdan ilg'orgacha — har bir daraja va yo'nalish uchun alohida dastur.",
+    "items": {
+      "ielts": {
+        "title": "IELTS tayyorlov",
+        "badges": ["Daraja: B1 – B2"],
+        "desc": "Listening, Reading, Writing va Speaking bo'yicha maqsadli tayyorgarlik — real imtihon formatida.",
+        "features": ["Muntazam mock imtihonlar", "Writing tekshiruvi va tahlili", "Band 7.0+ strategiyalari"]
+      },
+      "general": {
+        "title": "Umumiy ingliz tili",
+        "badges": ["Daraja: A1 – C1"],
+        "desc": "Nol darajadan boshlab grammatika, lug'at, tinglash va gapirishni bosqichma-bosqich o'rganasiz.",
+        "features": ["To'rt ko'nikma ustida ish", "Jonli muloqot amaliyoti", "CEFR imtihoniga tayyorgarlik"]
+      },
+      "kids": {
+        "title": "Kids English",
+        "badges": ["5–12 yosh"],
+        "desc": "O'yin va interaktiv darslar orqali bolalar ingliz tilini zavq bilan o'rganadi.",
+        "features": ["Qiziqarli interaktiv o'yinlar", "Ilk darsdanoq gapirishni boshlash", "Tajribali va quvnoq ustozlar", "Har oy bolalar musobaqasi"]
+      },
+      "korean": {
+        "title": "Koreys tili",
+        "badges": ["0 dan boshlab", "TOPIK 1", "TOPIK 2"],
+        "desc": "Koreys tilini 0 dan o'rganing yoki TOPIK 1 / TOPIK 2 imtihonlariga tayyorlaning — o'zingizga mos bosqichni tanlang.",
+        "features": ["Zamonaviy va samarali o'qitish metodikalari", "TOPIK imtihoniga yo'naltirilgan darslar", "Gapirish, tinglash, o'qish va yozish birgalikda rivojlanadi", "Koreya madaniyati bilan yaqindan tanishish", "Qiziqarli amaliy mashg'ulotlar", "Samimiy muhit va coffee break'lar"]
+      },
+      "president": {
+        "title": "Prezident maktablariga tayyorlov",
+        "badges": ["Prezident maktabi", "Al-Xorazmiy maktabi"],
+        "desc": "Farzandingiz Prezident maktabi yoki Al-Xorazmiy nomidagi maktab o'quvchisi bo'lishini istaysizmi? Unda vaqtni boy bermang!",
+        "features": ["Akademik ingliz tili (Academic English)", "Ingliz tilida mantiqiy masalalar yechish", "Murakkab matnlar ustida ishlash va vaqtni to'g'ri taqsimlash sirlari"]
+      },
+      "turkish": {
+        "title": "Turk tili — intensiv kurs",
+        "badges": ["Intensiv", "Sertifikatga tayyorlov"],
+        "desc": "Sertifikat egasiga aylanishni xohlaysizmi? 3 oyda biz bilan bu juda oson! Bakalavr, magistratura yoki PhD bosqichiga kirish uchun turk tilini o'rganing.",
+        "features": ["4 bo'limli intensiv tayyorgarlik", "Okuma · Dinleme · Yazma · Konuşma", "Imtihon va sertifikatga yo'naltirilgan darslar"]
+      }
+    }
+  },
+  "why": {
+    "tag": "Nega aynan biz",
+    "title": "Stanford Education'ni tanlashning sabablari",
+    "subtitle": "Bizni farqlaydigan narsa — natijaga bo'lgan mas'uliyat.",
+    "items": {
+      "teachers": {
+        "title": "Kuchli ustozlar",
+        "desc": "Multilevel instruktori bo'lgan, yuzlab bitiruvchi tayyorlagan tajribali ustozlar."
+      },
+      "groups": {
+        "title": "Kichik guruhlar",
+        "desc": "Har bir o'quvchiga yetarli e'tibor beriladigan 6–10 kishilik guruhlar."
+      },
+      "results": {
+        "title": "Isbotlangan natijalar",
+        "desc": "1000+ bitiruvchi, 50+ IELTS va 500+ sertifikat egasi."
+      },
+      "method": {
+        "title": "Zamonaviy metodika",
+        "desc": "Xalqaro standartlarga asoslangan, amaliyotga yo'naltirilgan darslar."
+      },
+      "mock": {
+        "title": "Muntazam mock imtihon",
+        "desc": "Real imtihon sharoitida mashq qilib, qo'rquvni yo'qotasiz."
+      },
+      "feedback": {
+        "title": "Shaxsiy fikr-mulohaza",
+        "desc": "Har bir yozma va og'zaki ish bo'yicha batafsil, individual tahlil."
+      }
+    }
+  },
+  "steps": {
+    "tag": "Qanday boshlanadi",
+    "title": "Bir necha oddiy qadam",
+    "subtitle": "Bog'lanishdan natijagacha — yo'lni biz bilan bosib o'tasiz.",
+    "items": {
+      "test": {
+        "title": "Bepul daraja aniqlash",
+        "desc": "Bilim darajangizni aniqlaymiz va mos guruhni tanlaymiz."
+      },
+      "group": {
+        "title": "Guruhga qo'shilish",
+        "desc": "Vaqtingizga qulay jadval bo'yicha darslar boshlanadi."
+      },
+      "study": {
+        "title": "Darslar va amaliyot",
+        "desc": "Muntazam darslar, uy vazifasi va jonli muloqot bilan o'rganasiz."
+      },
+      "exam": {
+        "title": "Mock va imtihon",
+        "desc": "Mock imtihonlardan so'ng real IELTS/CEFR'ni ishonch bilan topshirasiz."
+      }
+    }
+  },
+  "results": {
+    "tag": "Natijalar",
+    "title": "Bitiruvchilarimiz muvaffaqiyati",
+    "subtitle": "Ularning natijalari — bizning eng yaxshi reklamamiz. Kartani bosib, Instagram'da to'liq ko'ring.",
+    "watch": "Instagram'da ko'rish",
+    "scoreLabel": "IELTS ball",
+    "items": {
+      "one": {
+        "name": "Dilnoza Karimova",
+        "score": "7.5",
+        "course": "IELTS tayyorlov",
+        "quote": "Writing'da 6.0'dan 7.5'ga chiqdim. Ustozimning har bir esseni batafsil tahlil qilgani hal qiluvchi bo'ldi."
+      },
+      "two": {
+        "name": "Jasur Toshmatov",
+        "score": "8.0",
+        "course": "IELTS tayyorlov",
+        "quote": "Speaking'dan juda qo'rqardim. Amaliy darslardan so'ng imtihonda erkin gaplashdim va 8.0 oldim."
+      },
+      "three": {
+        "name": "Malika Yusupova",
+        "score": "7.0",
+        "course": "Umumiy + IELTS",
+        "quote": "Nol darajadan boshlaganman. Bir yilda ingliz tilida bemalol gaplashib, IELTS 7.0 oldim."
+      }
+    }
+  },
+  "teachers": {
+    "tag": "Ustozimiz",
+    "title": "Bosh ustoz va asoschi",
+    "subtitle": "Markazimizga tajribali ustoz — asoschimiz shaxsan rahbarlik qiladi.",
+    "founderBadge": "Asoschi",
+    "aboutLink": "Ustoz haqida qisqacha",
+    "aboutHeading": "<accent>{name}</accent> haqida",
+    "items": {
+      "one": {
+        "name": "Sadoqat Begimqulova",
+        "role": "Ingliz tili ustozi · Multilevel instruktor",
+        "score": "9+ yil tajriba",
+        "bio": "9 yildan ortiq tajribaga ega Multilevel instruktori. Yuzlab o'quvchini IELTS va CEFR imtihonlariga muvaffaqiyatli tayyorlagan — 50+ IELTS va 500+ sertifikat egasini yetishtirgan."
+      }
+    }
+  },
+  "enroll": {
+    "tag": "Bog'lanish",
+    "title": "Bepul konsultatsiya oling",
+    "subtitle": "Ism va telefon raqamingizni qoldiring — menejerimiz tez orada siz bilan bog'lanadi va barcha savollaringizga javob beradi.",
+    "form": {
+      "name": "Ism familiyangiz",
+      "namePh": "Ism va familiyangiz",
+      "phone": "Telefon raqamingiz",
+      "phonePh": "+998 90 123 45 67",
+      "submit": "Yuborish",
+      "loading": "Yuborilyapti…",
+      "success": "Rahmat! Menejerimiz tez orada siz bilan bog'lanadi.",
+      "errorRequired": "Iltimos, ism va telefon raqamingizni kiriting.",
+      "errorPhone": "Iltimos, to'g'ri telefon raqam kiriting.",
+      "error": "Xatolik yuz berdi. Iltimos, qayta urinib ko'ring yoki telefon qiling."
+    },
+    "aside": {
+      "title": "Nega hoziroq bog'lanish kerak?",
+      "p1": "Birinchi sinov darsi — bepul",
+      "p2": "Daraja aniqlash — bepul",
+      "p3": "Guruhlarda joylar cheklangan",
+      "orCall": "Yoki to'g'ridan-to'g'ri qo'ng'iroq qiling:"
+    }
+  },
+  "faq": {
+    "tag": "Savol-javob",
+    "title": "Ko'p beriladigan savollar",
+    "subtitle": "Javobini topa olmadingizmi? Bizga yozing yoki qo'ng'iroq qiling.",
+    "items": {
+      "price": {
+        "q": "Kurslar narxi qancha?",
+        "a": "Narx tanlangan kurs va guruhga bog'liq. Aniq narxni bepul konsultatsiya vaqtida aytamiz — raqamingizni qoldiring, o'zimiz bog'lanamiz."
+      },
+      "trial": {
+        "q": "Sinov darsi bormi?",
+        "a": "Ha, birinchi sinov darsi va daraja aniqlash butunlay bepul. Kelib, o'zingiz ko'rib, keyin qaror qilasiz."
+      },
+      "duration": {
+        "q": "Kurs qancha davom etadi?",
+        "a": "Umumiy kurslar 3–9 oy, IELTS tayyorlov esa odatda 3–6 oy. Muddat boshlang'ich darajangizga bog'liq."
+      },
+      "group": {
+        "q": "Guruhda nechta o'quvchi bo'ladi?",
+        "a": "Guruhlar 6–10 kishidan iborat. Bu har bir o'quvchiga yetarli e'tibor berish imkonini beradi."
+      },
+      "korean": {
+        "q": "Koreys tili kursi ham bormi?",
+        "a": "Ha, ingliz tilidan tashqari koreys tili kurslarini ham olib boramiz — boshlang'ich (A1) darajadan."
+      },
+      "level": {
+        "q": "Noldan boshlasam bo'ladimi?",
+        "a": "Albatta. Bizda A1 (boshlang'ich) darajadan tortib ilg'or darajagacha guruhlar mavjud."
+      }
+    }
+  },
+  "finalCta": {
+    "title": "Kelajagingiz ingliz tilidan boshlanadi",
+    "subtitle": "Bugun raqamingizni qoldiring, birinchi darsga bepul keling.",
+    "button": "Darsga yozilish"
+  },
+  "footer": {
+    "tagline": "Koson shahridagi ingliz tili, IELTS va koreys tili markazi. Widen your horizons.",
+    "contactTitle": "Aloqa",
+    "coursesTitle": "Kurslar",
+    "linksTitle": "Bo'limlar",
+    "findUs": "Bizni xaritadan toping",
+    "address": "Qashqadaryo viloyati, Koson shahri, Madaniyat Markazi ro'parasida",
+    "hours": "Dush–Shan: 8:00–19:00",
+    "rights": "Barcha huquqlar himoyalangan."
+  },
+  "common": {
+    "langUz": "O'zbekcha",
+    "langRu": "Ruscha",
+    "toggleTheme": "Yorug'/qorong'i rejim",
+    "openMenu": "Menyuni ochish",
+    "closeMenu": "Menyuni yopish"
+  }
+}
