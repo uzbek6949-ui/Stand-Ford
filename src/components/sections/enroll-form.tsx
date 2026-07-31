@@ -31,7 +31,11 @@ export function EnrollForm() {
   const onPhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const raw = e.target.value;
     let d = raw.replace(/\D/g, "");
-    if (d.startsWith("998")) d = d.slice(3);
+    // Drop the country code, but only when it's really the country code:
+    // either our own rendered "+998 …" prefix, or a pasted 12-digit number.
+    // A bare 9-digit paste starting with 99 8… must keep all its digits.
+    if (raw.trimStart().startsWith("+998")) d = d.slice(3);
+    else if (d.length > 9 && d.startsWith("998")) d = d.slice(3);
     d = d.slice(0, 9);
     // Backspace on a separator ("-", ")", space) removes no digit — the value
     // would re-format to the same string and the key would feel dead. Detect
