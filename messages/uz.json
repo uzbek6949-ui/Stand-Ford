@@ -229,7 +229,7 @@
       "loading": "Yuborilyapti…",
       "success": "Rahmat! Menejerimiz tez orada siz bilan bog'lanadi.",
       "errorRequired": "Iltimos, ism va telefon raqamingizni kiriting.",
-      "errorPhone": "Iltimos, to'g'ri telefon raqam kiriting.",
+      "errorPhone": "Telefon raqamini to'liq kiriting.",
       "error": "Xatolik yuz berdi. Iltimos, qayta urinib ko'ring yoki telefon qiling."
     },
     "aside": {

@@ -9,25 +9,52 @@ const fieldClass =
 
 type Status = "idle" | "loading" | "success" | "error";
 
+// Formats up to 9 national digits as "+998 (XX) XXX-XX-XX" while typing.
+function formatUzPhone(digits: string): string {
+  let out = "+998";
+  if (digits.length > 0) out += ` (${digits.slice(0, 2)}`;
+  if (digits.length >= 2) out += ")";
+  if (digits.length > 2) out += ` ${digits.slice(2, 5)}`;
+  if (digits.length > 5) out += `-${digits.slice(5, 7)}`;
+  if (digits.length > 7) out += `-${digits.slice(7, 9)}`;
+  return out;
+}
+
 export function EnrollForm() {
   const t = useTranslations("enroll.form");
   const locale = useLocale();
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState("");
+  // National part of the phone number: exactly the 9 digits after +998.
+  const [phoneDigits, setPhoneDigits] = useState("");
+
+  const onPhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const raw = e.target.value;
+    let d = raw.replace(/\D/g, "");
+    if (d.startsWith("998")) d = d.slice(3);
+    d = d.slice(0, 9);
+    // Backspace on a separator ("-", ")", space) removes no digit — the value
+    // would re-format to the same string and the key would feel dead. Detect
+    // that case and drop the last digit instead.
+    if (d === phoneDigits && raw.length < formatUzPhone(phoneDigits).length) {
+      d = d.slice(0, -1);
+    }
+    setPhoneDigits(d);
+    if (status === "error") setStatus("idle");
+  };
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
     const data = new FormData(form);
     const name = String(data.get("name") ?? "").trim();
-    const phone = String(data.get("phone") ?? "").trim();
 
-    if (!name || !phone) {
+    if (!name || phoneDigits.length === 0) {
       setStatus("error");
       setError(t("errorRequired"));
       return;
     }
-    if (phone.replace(/\D/g, "").length < 7) {
+    if (phoneDigits.length < 9) {
       setStatus("error");
       setError(t("errorPhone"));
       return;
@@ -39,11 +66,12 @@ export function EnrollForm() {
       const res = await fetch("/api/enroll", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, phone, locale }),
+        body: JSON.stringify({ name, phone: formatUzPhone(phoneDigits), locale }),
       });
       if (!res.ok) throw new Error("request failed");
       setStatus("success");
       form.reset();
+      setPhoneDigits("");
     } catch {
       setStatus("error");
       setError(t("error"));
@@ -91,7 +119,10 @@ export function EnrollForm() {
           type="tel"
           inputMode="tel"
           autoComplete="tel"
-          placeholder={t("phonePh")}
+          placeholder="+998 (__) ___-__-__"
+          value={phoneDigits ? formatUzPhone(phoneDigits) : ""}
+          onChange={onPhoneChange}
+          maxLength={19}
           className={fieldClass}
         />
       </div>
@@ -99,7 +130,7 @@ export function EnrollForm() {
       <button
         type="submit"
         disabled={loading}
-        className="btn btn-primary w-full disabled:cursor-not-allowed disabled:opacity-70"
+        className="btn btn-cta w-full disabled:cursor-not-allowed disabled:opacity-70"
       >
         {loading ? (
           <>
