@@ -37,6 +37,10 @@ export function Results() {
           <img
             src={r.img}
             alt=""
+            loading="lazy"
+            decoding="async"
+            width={256}
+            height={320}
             className="aspect-[4/5] w-full object-cover transition-transform duration-500 group-hover:scale-[1.05]"
           />
 

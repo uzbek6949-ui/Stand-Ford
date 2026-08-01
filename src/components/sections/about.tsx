@@ -30,6 +30,8 @@ export function About() {
               <img
                 src="/markaz.jpg?v=1"
                 alt="Stanford o'quv markazi binosi"
+                loading="lazy"
+                decoding="async"
                 className="relative aspect-[16/10] w-full rounded-xl object-cover shadow-lg ring-1 ring-white/25"
               />
 

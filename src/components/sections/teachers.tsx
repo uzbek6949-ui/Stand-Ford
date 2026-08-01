@@ -26,6 +26,8 @@ export function Teachers() {
               <img
                 src="/teacher-photo.jpg?v=1"
                 alt={name}
+                loading="lazy"
+                decoding="async"
                 className="aspect-[4/5] w-full object-cover object-top"
               />
               <span className="absolute left-4 top-4 rounded-full bg-gold px-3.5 py-1.5 text-xs font-bold text-[#1d1205] shadow-md">

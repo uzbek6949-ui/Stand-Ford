@@ -1,7 +1,7 @@
 "use client";
 
 import { useLocale } from "next-intl";
-import { useTransition } from "react";
+import { useEffect, useTransition } from "react";
 import { usePathname, useRouter } from "@/i18n/navigation";
 
 const LOCALES = [
@@ -10,11 +10,19 @@ const LOCALES = [
 ] as const;
 
 // Styled for the red navbar: white pill on the active locale.
+// Switching keeps the scroll position (no jump to top) and the other locale
+// is prefetched, so the swap feels like an in-place text change.
 export function LanguageSwitcher() {
   const locale = useLocale();
   const pathname = usePathname();
   const router = useRouter();
   const [pending, startTransition] = useTransition();
+
+  useEffect(() => {
+    for (const l of LOCALES) {
+      if (l.code !== locale) router.prefetch(pathname, { locale: l.code });
+    }
+  }, [locale, pathname, router]);
 
   return (
     <div className="inline-flex items-center rounded-full border border-white/30 bg-white/10 p-0.5 text-xs font-semibold backdrop-blur-sm">
@@ -27,7 +35,9 @@ export function LanguageSwitcher() {
             disabled={pending || active}
             aria-current={active ? "true" : undefined}
             onClick={() =>
-              startTransition(() => router.replace(pathname, { locale: l.code }))
+              startTransition(() =>
+                router.replace(pathname, { locale: l.code, scroll: false }),
+              )
             }
             className={`rounded-full px-2.5 py-1 transition-colors ${
               active

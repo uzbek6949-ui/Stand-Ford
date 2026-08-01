@@ -52,6 +52,7 @@ export function EnrollForm() {
     const form = e.currentTarget;
     const data = new FormData(form);
     const name = String(data.get("name") ?? "").trim();
+    const website = String(data.get("website") ?? ""); // honeypot for bots
 
     if (!name || phoneDigits.length === 0) {
       setStatus("error");
@@ -70,7 +71,7 @@ export function EnrollForm() {
       const res = await fetch("/api/enroll", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, phone: formatUzPhone(phoneDigits), locale }),
+        body: JSON.stringify({ name, phone: formatUzPhone(phoneDigits), locale, website }),
       });
       if (!res.ok) throw new Error("request failed");
       setStatus("success");
@@ -99,6 +100,13 @@ export function EnrollForm() {
 
   return (
     <form onSubmit={onSubmit} noValidate className="space-y-4">
+      {/* Honeypot — hidden from humans, auto-filled by bots. If it has a
+          value the server silently drops the submission. */}
+      <div aria-hidden className="pointer-events-none absolute left-[-9999px] h-0 w-0 overflow-hidden">
+        <label htmlFor="website">Website</label>
+        <input id="website" name="website" type="text" tabIndex={-1} autoComplete="off" />
+      </div>
+
       <div>
         <label htmlFor="name" className="mb-1.5 block text-sm font-medium text-foreground">
           {t("name")}
