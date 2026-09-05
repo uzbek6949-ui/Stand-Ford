@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Reveal } from "@/components/reveal";
 import { SectionHeading } from "@/components/section-heading";
@@ -9,17 +9,34 @@ import { RESULTS } from "@/lib/results-data";
 
 // Student results as a continuous right-to-left marquee of reel covers.
 // Hover (desktop) or touch (mobile) pauses the drift; clicking a card opens
-// that student's Instagram post in a new tab.
+// that student's Instagram post in a new tab. The animation also stops while
+// the section is scrolled out of view, so it never burns the phone's GPU in
+// the background — the main cause of stutter on mobile.
 export function Results() {
   const t = useTranslations("results");
-  const [paused, setPaused] = useState(false);
+  const [touchPaused, setTouchPaused] = useState(false);
+  const [inView, setInView] = useState(true);
   const resumeTimer = useRef<number | undefined>(undefined);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el || typeof IntersectionObserver === "undefined") return;
+    const io = new IntersectionObserver(
+      ([entry]) => setInView(entry.isIntersecting),
+      { rootMargin: "200px 0px" },
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
 
   const pauseForTouch = () => {
-    setPaused(true);
+    setTouchPaused(true);
     window.clearTimeout(resumeTimer.current);
-    resumeTimer.current = window.setTimeout(() => setPaused(false), 5000);
+    resumeTimer.current = window.setTimeout(() => setTouchPaused(false), 5000);
   };
+
+  const paused = touchPaused || !inView;
 
   const CardGroup = ({ hidden = false }: { hidden?: boolean }) => (
     <div aria-hidden={hidden || undefined} className="flex gap-4 pr-4 sm:gap-6 sm:pr-6">
@@ -77,6 +94,7 @@ export function Results() {
 
   return (
     <section
+      ref={sectionRef}
       id="results"
       className="relative overflow-hidden border-y border-white/10 py-20 sm:py-28"
       style={{ background: "#7a1012" }}
