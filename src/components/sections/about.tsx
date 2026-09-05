@@ -37,7 +37,7 @@ export function About() {
 
               {/* Brand block — moved below the photo */}
               <div className="relative flex flex-1 flex-col items-center justify-center pt-5 text-center">
-                <span className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-white/12 text-white ring-1 ring-white/25 backdrop-blur">
+                <span className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-white/20 text-white ring-1 ring-white/25">
                   <GraduationCap className="h-7 w-7" />
                 </span>
                 <p className="font-display mt-4 text-xl font-bold text-white">

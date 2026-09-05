@@ -27,9 +27,9 @@ export function Navbar() {
         scrolled ? "shadow-md" : ""
       }`}
       style={{
-        backgroundColor: scrolled ? "rgba(94, 13, 14, 0.94)" : "transparent",
-        backdropFilter: scrolled ? "blur(10px)" : undefined,
-        WebkitBackdropFilter: scrolled ? "blur(10px)" : undefined,
+        // Solid (opaque) instead of backdrop-blur — a blurred fixed bar
+        // re-samples the page every scroll frame and stutters badly on phones.
+        backgroundColor: scrolled ? "#5e0d0e" : "transparent",
       }}
     >
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
@@ -74,7 +74,7 @@ export function Navbar() {
       {open ? (
         <div
           className="border-t border-white/15 lg:hidden"
-          style={{ backgroundColor: "rgba(94, 13, 14, 0.97)", backdropFilter: "blur(10px)" }}
+          style={{ backgroundColor: "#5e0d0e" }}
         >
           <div className="mx-auto flex max-w-6xl flex-col gap-1 px-4 py-4 sm:px-6">
             {LINKS.map((id) => (

@@ -23,3 +23,6 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
+
+# private handover / credentials doc — keep local, never publish
+LOYIHA-MALUMOTLARI.md

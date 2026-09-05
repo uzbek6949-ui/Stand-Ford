@@ -25,7 +25,7 @@ export function LanguageSwitcher() {
   }, [locale, pathname, router]);
 
   return (
-    <div className="inline-flex items-center rounded-full border border-white/30 bg-white/10 p-0.5 text-xs font-semibold backdrop-blur-sm">
+    <div className="inline-flex items-center rounded-full border border-white/30 bg-white/15 p-0.5 text-xs font-semibold">
       {LOCALES.map((l) => {
         const active = l.code === locale;
         return (
