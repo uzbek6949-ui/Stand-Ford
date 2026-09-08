@@ -13,6 +13,7 @@ import { Teachers } from "@/components/sections/teachers";
 import { Enroll } from "@/components/sections/enroll";
 import { Faq } from "@/components/sections/faq";
 import { FinalCta } from "@/components/sections/final-cta";
+import { MobileCta } from "@/components/mobile-cta";
 
 export default async function Home({
   params,
@@ -43,6 +44,9 @@ export default async function Home({
         <FinalCta />
       </main>
       <Footer />
+      {/* keeps the last footer line clear of the fixed mobile action bar */}
+      <div aria-hidden className="h-16 sm:hidden" />
+      <MobileCta />
     </>
   );
 }

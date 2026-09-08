@@ -24,7 +24,7 @@ export function Courses() {
   const t = useTranslations("courses");
 
   return (
-    <section id="courses" className="relative py-20 sm:py-28">
+    <section id="courses" className="relative border-t border-white/10 py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <SectionHeading title={t("title")} subtitle={t("subtitle")} />
 

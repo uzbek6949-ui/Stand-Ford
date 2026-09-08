@@ -10,7 +10,7 @@ export function Enroll() {
   const t = useTranslations("enroll");
 
   return (
-    <section id="enroll" className="relative overflow-hidden py-20 sm:py-28">
+    <section id="enroll" className="relative overflow-hidden border-t border-white/10 py-20 sm:py-28">
       <div aria-hidden className="blob right-[-6%] top-[10%] h-72 w-72" style={{ background: "var(--gold)" }} />
 
       <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
