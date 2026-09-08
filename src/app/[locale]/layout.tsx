@@ -16,7 +16,7 @@ const inter = Inter({
 // lettering). Latin only — the wordmark text is always "STANFORD EDUCATION".
 const tektur = Tektur({
   subsets: ["latin"],
-  weight: ["800", "900"],
+  weight: ["800"],
   variable: "--font-block",
   display: "swap",
 });
@@ -24,7 +24,7 @@ const tektur = Tektur({
 // Handwritten script for the teacher's name (has Cyrillic for the ru locale).
 const caveat = Caveat({
   subsets: ["latin", "cyrillic"],
-  weight: ["500", "600", "700"],
+  weight: ["600"],
   variable: "--font-script",
   display: "swap",
 });
