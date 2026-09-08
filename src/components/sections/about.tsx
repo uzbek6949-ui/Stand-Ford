@@ -23,8 +23,6 @@ export function About() {
                     "linear-gradient(150deg, color-mix(in oklab, var(--brand) 88%, black), color-mix(in oklab, var(--brand) 55%, black))",
                 }}
               />
-              <div aria-hidden className="grid-overlay absolute inset-0 opacity-40" />
-
               {/* Real centre building, framed at the top */}
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
@@ -63,10 +61,7 @@ export function About() {
         {/* Copy */}
         <div>
           <Reveal>
-            <span className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">
-              {t("tag")}
-            </span>
-            <h2 className="font-display mt-3 text-3xl font-bold tracking-tight text-balance text-white sm:text-4xl">
+            <h2 className="font-display text-3xl font-bold tracking-tight text-balance text-white sm:text-4xl">
               {t("title")}
             </h2>
             <div className="hairline mt-6" />

@@ -3,7 +3,6 @@ import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { Hero } from "@/components/sections/hero";
 import { StatsStrip } from "@/components/sections/stats-strip";
-import { Marquee } from "@/components/sections/marquee";
 import { Hook } from "@/components/sections/hook";
 import { About } from "@/components/sections/about";
 import { Courses } from "@/components/sections/courses";
@@ -32,7 +31,6 @@ export default async function Home({
       <main>
         <Hero />
         <StatsStrip />
-        <Marquee />
         <Hook />
         <About />
         <Courses />

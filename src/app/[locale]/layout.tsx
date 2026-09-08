@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Caveat, Inter, Tektur, Unbounded } from "next/font/google";
+import { Caveat, Inter, Tektur } from "next/font/google";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
@@ -9,14 +9,6 @@ import { routing } from "@/i18n/routing";
 const inter = Inter({
   subsets: ["latin", "cyrillic"],
   variable: "--font-sans",
-  display: "swap",
-});
-
-// Bold, modern display font for headings — energetic rather than classical.
-const unbounded = Unbounded({
-  subsets: ["latin", "cyrillic"],
-  weight: ["500", "600", "700", "800"],
-  variable: "--font-display",
   display: "swap",
 });
 
@@ -83,7 +75,7 @@ export default async function LocaleLayout({
   return (
     <html
       lang={locale}
-      className={`${inter.variable} ${unbounded.variable} ${tektur.variable} ${caveat.variable} h-full`}
+      className={`${inter.variable} ${tektur.variable} ${caveat.variable} h-full`}
       suppressHydrationWarning
     >
       <body className="min-h-full bg-background text-foreground antialiased">

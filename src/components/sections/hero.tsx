@@ -1,5 +1,5 @@
 import { useTranslations } from "next-intl";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowRight, CheckCircle2, MapPin } from "lucide-react";
 import { Reveal } from "@/components/reveal";
 
 export function Hero() {
@@ -15,34 +15,6 @@ export function Hero() {
           "linear-gradient(160deg, #5e0d0e 0%, #a11a1a 48%, #760f11 100%)",
       }}
     >
-      {/* faint grid */}
-      <div
-        aria-hidden
-        className="absolute inset-0"
-        style={{
-          backgroundImage:
-            "linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px)",
-          backgroundSize: "56px 56px",
-          maskImage:
-            "radial-gradient(ellipse 80% 70% at 50% 42%, #000 40%, transparent 82%)",
-          WebkitMaskImage:
-            "radial-gradient(ellipse 80% 70% at 50% 42%, #000 40%, transparent 82%)",
-        }}
-      />
-      {/* giant faded edge words */}
-      <span
-        aria-hidden
-        className="font-display pointer-events-none absolute -left-6 top-8 select-none text-[7rem] font-extrabold uppercase leading-none text-white/[0.05] sm:text-[10rem]"
-      >
-        IELTS
-      </span>
-      <span
-        aria-hidden
-        className="font-display pointer-events-none absolute -right-6 bottom-16 select-none text-[7rem] font-extrabold uppercase leading-none text-white/[0.05] sm:text-[10rem]"
-      >
-        English
-      </span>
-
       {/* thin decorative side rails */}
       <span
         aria-hidden
@@ -59,17 +31,10 @@ export function Hero() {
 
       {/* content */}
       <div className="relative z-10 mx-auto w-full max-w-6xl px-4 pt-24 sm:px-6 sm:pt-28">
-        {/* Big two-line wordmark ON TOP — chamfered block letters with a
-            white→gold gradient. rem-capped sizes so it scales with zoom. */}
+        {/* Big two-line wordmark ON TOP — solid white chamfered block letters.
+            rem-capped sizes so it scales with zoom. */}
         <h1
-          className="font-block pointer-events-none relative z-0 select-none text-center font-extrabold uppercase [filter:drop-shadow(0_14px_30px_rgba(0,0,0,0.35))]"
-          style={{
-            backgroundImage:
-              "linear-gradient(180deg, #ffffff 0%, #ffedcb 55%, #e9ba62 100%)",
-            WebkitBackgroundClip: "text",
-            backgroundClip: "text",
-            color: "transparent",
-          }}
+          className="font-block pointer-events-none relative z-0 select-none text-center font-extrabold uppercase text-white [filter:drop-shadow(0_14px_30px_rgba(0,0,0,0.35))]"
         >
           <span
             className="block whitespace-nowrap leading-[0.95]"
@@ -89,7 +54,8 @@ export function Hero() {
         <div className="mt-10 grid items-center gap-10 text-left sm:mt-12 lg:grid-cols-[1.02fr_0.95fr] lg:gap-14">
           {/* LEFT — copy */}
           <Reveal>
-            <p className="text-xs font-semibold uppercase tracking-[0.32em] text-white/60 sm:text-sm">
+            <p className="inline-flex items-center gap-2 text-sm text-white/75">
+              <MapPin className="h-4 w-4 text-gold-soft" />
               {t("topLabel")}
             </p>
             <h2 className="font-display mt-4 text-3xl font-extrabold leading-tight text-balance sm:text-4xl xl:text-[2.7rem]">

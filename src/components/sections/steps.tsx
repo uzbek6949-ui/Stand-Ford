@@ -16,7 +16,7 @@ export function Steps() {
   return (
     <section id="steps" className="relative py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <SectionHeading tag={t("tag")} title={t("title")} subtitle={t("subtitle")} />
+        <SectionHeading title={t("title")} subtitle={t("subtitle")} />
 
         <div className="relative mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {/* connecting line on large screens */}

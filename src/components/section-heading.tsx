@@ -3,13 +3,11 @@ import { Reveal } from "./reveal";
 // `onLight` renders dark text for sections with a light background;
 // the default (white text) is for sections sitting on the red page bg.
 export function SectionHeading({
-  tag,
   title,
   subtitle,
   center = true,
   onLight = false,
 }: {
-  tag?: string;
   title: string;
   subtitle?: string;
   center?: boolean;
@@ -17,17 +15,8 @@ export function SectionHeading({
 }) {
   return (
     <Reveal className={center ? "mx-auto max-w-2xl text-center" : "max-w-2xl"}>
-      {tag ? (
-        <span
-          className={`text-xs font-semibold uppercase tracking-[0.18em] ${
-            onLight ? "text-brand" : "text-gold"
-          }`}
-        >
-          {tag}
-        </span>
-      ) : null}
       <h2
-        className={`font-display mt-3 text-3xl font-bold tracking-tight text-balance sm:text-4xl ${
+        className={`font-display text-3xl font-bold tracking-tight text-balance sm:text-4xl ${
           onLight ? "text-foreground" : "text-white"
         }`}
       >

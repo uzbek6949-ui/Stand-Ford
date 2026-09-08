@@ -11,7 +11,7 @@ export function Faq() {
   return (
     <section id="faq" className="relative border-t border-border bg-background py-20 sm:py-28">
       <div className="mx-auto max-w-3xl px-4 sm:px-6">
-        <SectionHeading onLight tag={t("tag")} title={t("title")} subtitle={t("subtitle")} />
+        <SectionHeading onLight title={t("title")} subtitle={t("subtitle")} />
 
         <div className="mt-12 space-y-3">
           {FAQ.map((key, i) => (

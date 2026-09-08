@@ -22,9 +22,6 @@
   --gold-soft: #caa24a;
   --accent: #8c1515;
   --ring: #8c1515;
-  /* frosted surface */
-  --glass: rgba(255, 255, 255, 0.7);
-  --glass-border: rgba(29, 21, 16, 0.08);
 }
 
 .dark {
@@ -42,8 +39,6 @@
   --gold-soft: #e6c78f;
   --accent: #e0605a;
   --ring: #e0605a;
-  --glass: rgba(32, 25, 17, 0.6);
-  --glass-border: rgba(217, 176, 106, 0.14);
 }
 
 @theme inline {
@@ -64,7 +59,7 @@
 
   --radius-card: 1rem;
   --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-display), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
 }
 
 /* Keep the default border color in the base layer so Tailwind's
@@ -109,14 +104,6 @@ body {
 /* Handwritten script for the teacher's name */
 .font-script {
   font-family: var(--font-script), "Segoe Script", cursive;
-}
-
-/* Crimson → gold gradient text (classic collegiate pairing) */
-.gradient-text {
-  background-image: linear-gradient(100deg, var(--brand), var(--gold) 95%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
 }
 
 /* ─────────────── Buttons ─────────────── */
@@ -181,14 +168,6 @@ body {
   background-image: linear-gradient(90deg, var(--gold), transparent);
 }
 
-/* Frosted card */
-.glass {
-  background: var(--glass);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border: 1px solid var(--glass-border);
-}
-
 /* Ambient color blobs behind hero / sections */
 .blob {
   position: absolute;
@@ -200,16 +179,6 @@ body {
 }
 .dark .blob {
   opacity: 0.35;
-}
-
-/* Faint academic grid, faded with a mask */
-.grid-overlay {
-  background-image:
-    linear-gradient(to right, var(--border) 1px, transparent 1px),
-    linear-gradient(to bottom, var(--border) 1px, transparent 1px);
-  background-size: 60px 60px;
-  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, #000 25%, transparent 75%);
-  mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, #000 25%, transparent 75%);
 }
 
 /* Scroll-reveal — visible by DEFAULT so the page is never blank if JS or
@@ -231,10 +200,6 @@ body {
 @keyframes marquee {
   from { transform: translate3d(0, 0, 0); }
   to { transform: translate3d(-50%, 0, 0); }
-}
-.animate-marquee {
-  animation: marquee 30s linear infinite;
-  will-change: transform;
 }
 
 /* Results marquee — student result cards drifting right-to-left.
@@ -258,6 +223,5 @@ body {
   html { scroll-behavior: auto; }
   .reveal,
   .reveal[data-reveal="hidden"] { opacity: 1; transform: none; transition: none; }
-  .animate-marquee { animation: none; }
   .results-track { animation: none; }
 }

@@ -13,7 +13,7 @@ export function Hook() {
   return (
     <section className="relative border-b border-border bg-[#f7f2e8] py-20 sm:py-28">
       <div className="mx-auto max-w-5xl px-4 sm:px-6">
-        <SectionHeading onLight tag={t("tag")} title={t("title")} subtitle={t("subtitle")} />
+        <SectionHeading onLight title={t("title")} subtitle={t("subtitle")} />
 
         <div className="mt-14 space-y-4">
           {ITEMS.map((key, i) => (

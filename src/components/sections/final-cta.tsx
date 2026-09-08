@@ -16,7 +16,6 @@ export function FinalCta() {
                 "linear-gradient(135deg, color-mix(in oklab, var(--brand) 92%, black), color-mix(in oklab, var(--brand) 60%, black))",
             }}
           >
-            <div aria-hidden className="grid-overlay absolute inset-0 opacity-30" />
             <div className="relative">
               <h2 className="font-display mx-auto max-w-2xl text-3xl font-bold tracking-tight text-balance text-white sm:text-4xl">
                 {t("title")}

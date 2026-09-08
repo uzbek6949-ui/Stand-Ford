@@ -17,10 +17,7 @@ export function Enroll() {
         <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
           {/* Aside */}
           <Reveal>
-            <span className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">
-              {t("tag")}
-            </span>
-            <h2 className="font-display mt-3 text-3xl font-bold tracking-tight text-balance text-white sm:text-4xl">
+            <h2 className="font-display text-3xl font-bold tracking-tight text-balance text-white sm:text-4xl">
               {t("title")}
             </h2>
             <p className="mt-4 max-w-md text-base text-white/70 text-pretty">
@@ -60,14 +57,7 @@ export function Enroll() {
             {/* brand wordmark filling the spare space, hero-style */}
             <div
               aria-hidden
-              className="font-block mt-8 select-none text-center font-extrabold uppercase"
-              style={{
-                backgroundImage:
-                  "linear-gradient(180deg, #ffffff 0%, #ffedcb 55%, #e9ba62 100%)",
-                WebkitBackgroundClip: "text",
-                backgroundClip: "text",
-                color: "transparent",
-              }}
+              className="font-block mt-8 select-none text-center font-extrabold uppercase text-white/95"
             >
               <span
                 className="block whitespace-nowrap leading-[0.95]"

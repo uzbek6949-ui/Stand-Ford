@@ -100,7 +100,7 @@ export function Results() {
       style={{ background: "#7a1012" }}
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <SectionHeading tag={t("tag")} title={t("title")} subtitle={t("subtitle")} />
+        <SectionHeading title={t("title")} subtitle={t("subtitle")} />
       </div>
 
       <Reveal className="mt-12">

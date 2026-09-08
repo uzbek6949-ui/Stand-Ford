@@ -25,7 +25,7 @@ export function Why() {
   return (
     <section id="why" className="relative border-y border-border bg-[#f7f2e8] py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <SectionHeading onLight tag={t("tag")} title={t("title")} subtitle={t("subtitle")} />
+        <SectionHeading onLight title={t("title")} subtitle={t("subtitle")} />
 
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {WHY.map(({ key, Icon }, i) => (

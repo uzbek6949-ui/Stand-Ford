@@ -16,7 +16,7 @@ export function Teachers() {
   return (
     <section id="teachers" className="relative py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <SectionHeading tag={t("tag")} title={t("title")} subtitle={t("subtitle")} />
+        <SectionHeading title={t("title")} subtitle={t("subtitle")} />
 
         <Reveal className="mt-14">
           <div className="grid items-center gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-14">
@@ -48,7 +48,7 @@ export function Teachers() {
 
             {/* RIGHT — about the teacher */}
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">
+              <p className="text-sm font-medium text-gold">
                 {t("items.one.role")}
               </p>
               <h3 className="font-display mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl">
