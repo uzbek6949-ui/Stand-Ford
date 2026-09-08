@@ -80,7 +80,7 @@ export function About() {
             <ul className="mt-8 grid gap-4 sm:grid-cols-2">
               {POINTS.map((p) => (
                 <li key={p} className="flex items-start gap-3">
-                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-gold" />
+                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-gold-soft" />
                   <span className="text-sm text-white/90">{t(`points.${p}`)}</span>
                 </li>
               ))}

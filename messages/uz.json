@@ -33,16 +33,6 @@
     "ielts": { "value": "50+", "label": "IELTS sertifikat" },
     "cefr": { "value": "500+", "label": "sertifikatlar" }
   },
-  "marquee": [
-    "IELTS tayyorlov",
-    "Umumiy ingliz tili",
-    "Kids English",
-    "Koreys tili",
-    "Grammar",
-    "Speaking",
-    "Mock imtihonlar",
-    "Multilevel"
-  ],
   "hook": {
     "tag": "Muammo bormi?",
     "title": "Sizni nima to'xtatib turibdi?",

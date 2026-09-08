@@ -48,13 +48,13 @@ export function Teachers() {
 
             {/* RIGHT — about the teacher */}
             <div>
-              <p className="text-sm font-medium text-gold">
+              <p className="text-sm font-medium text-white/80">
                 {t("items.one.role")}
               </p>
               <h3 className="font-display mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl">
                 {t.rich("aboutHeading", {
                   name: firstName,
-                  accent: (chunks) => <span className="text-gold">{chunks}</span>,
+                  accent: (chunks) => <span className="text-gold-soft">{chunks}</span>,
                 })}
               </h3>
               <div className="hairline mt-5" />
